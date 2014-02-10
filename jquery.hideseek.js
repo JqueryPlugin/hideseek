@@ -150,19 +150,17 @@
     $(window).on('load.hideseek.data-api', function() {
         $('[data-cat="hideseek"]').each(function() {
             var $this = $(this),
-                //auto_play = $this.attr('data-autoPlay');
-
-                start_index = $this.attr('data-startIndex') || 0;
-                animate_time = $this.attr('data-animateTime') || 600;
-                animate_interval_time = $this.attr('data-animateIntervalTime') || 2000;
+                start_index = $this.attr('data-startIndex') || 0,
+                animate_time = $this.attr('data-animateTime') || 600,
+                animate_interval_time = $this.attr('data-animateIntervalTime') || 2000,
                 type = $this.attr('data-type') || 'horizon';
-            //auto_play === 'true' ? $this.hideseek() : $this.hideseek({animate_interval_time: false});
 
+                //从html里面读取的都是字符串，所以下面使用+来转换成数字
             $this.hideseek({
-                // start_index : start_index,
-                // animate_time : animate_time,
-                // animate_interval_time: animate_interval_time,
-                // type : type
+                start_index : +start_index,
+                animate_time : +animate_time,
+                animate_interval_time: +animate_interval_time,
+                type : type
             });
 
         })

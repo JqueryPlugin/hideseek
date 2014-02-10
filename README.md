@@ -2,9 +2,11 @@
 A jQuery plugin that make element hide and seek.
 
 ##Demo
-You can try the [parallel demo]().
+You can try the [parallel demo](http://choi.sinaapp.com/static/github/hideseek/parallel.html).
 
-You can try the [vertical demo]().
+You can try the [vertical demo](http://choi.sinaapp.com/static/github/hideseek/vertical.html).
+
+You can try the [data-api demo](http://choi.sinaapp.com/static/github/hideseek/data-api.html).
 
 ##Dependency
 [jQuery](https://github.com/jquery/jquery)
@@ -12,7 +14,7 @@ You can try the [vertical demo]().
 ##Install
 Just download the repository and link to the local minimized script:
 
-    <script src="noisy/jquery/jquery.noisy.min.js"></script>
+    <script src="javascript/jquery.hideseek.min.js"></script>
 
 ##Usage
 An example showing all parameters would be the following:
@@ -53,9 +55,9 @@ You can also add methods in your scripts like this:
         return this;
     }
     $('ul.slideshow').data('hideseek').to(2);
-You can use data-api:
+This table is the all data-apis that you can use:
 
-<table style="width: 100%">
+<table>
    <tr>
       <th>data-api</th>
       <th> type </th>
