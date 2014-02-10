@@ -14,84 +14,6 @@
     <script type="text/javascript" src="javascript/jquery.hideseek.js"></script>
 </head>
 <body>
-	<!-- <ul class="slideshow clearfix" data-cat="hideseek" data-autoplay="false"> -->
-    <ul class="slideshow clearfix">
-        <li id="slide01" class="slide_default01">
-            <div class="like_wrapper">
-                <!--未赞-->
-                <a class="btn_like act_btn" href="#"><span>赞</span></a>
-                <!--已赞-->
-                <a class="btn_liked act_btn none" href="#"><span>赞</span></a>
-                <span class="like_num">已有86288137人赞</span>
-            </div>
-            <div class="column_right">
-                <div class="have_pri">必备特权：<a href="#">消息记录漫游</a></div>
-                <a class="btn_friends act_btn" href="#"><span>去圈好友</span></a>
-                <p>每天前4次圈好友，您和朋友均可得抽奖机会！</p>
-                <!--未圈好友-->
-                <div class="icon_choosen none"></div>
-                <!--已圈好友-->
-                <div class="icon_choose"></div>
-            </div>
-        </li>
-        <li id="slide02" class="slide_default02">
-            <div class="like_wrapper">
-                <!--未赞-->
-                <a class="btn_like act_btn" href="#"><span>赞</span></a>
-                <!--已赞-->
-                <a class="btn_liked act_btn none" href="#"><span>赞</span></a>
-                <span class="like_num">已有86288137人赞</span>
-            </div>
-            <div class="column_right">
-                <div class="have_pri">必备特权：<a href="#">原创表情包</a></div>
-               <a class="btn_friends act_btn" href="#"><span>去圈好友</span></a>
-                <p>每天前4次圈好友，您和朋友均可得抽奖机会！</p>
-                <!--未圈好友-->
-                <div class="icon_choosen none"></div>
-                <!--已圈好友-->
-                <div class="icon_choose"></div>
-            </div>
-        </li>
-        <li id="slide03" class="slide_default03">
-            <div class="like">
-                <!--未赞-->
-                <a class="btn_like act_btn" href="#"><span>赞</span></a>
-                <!--已赞-->
-                <a class="btn_liked act_btn none" href="#"><span>赞</span></a>
-                <span class="like_num">已有86288137人赞</span>
-            </div>
-            <div class="column_right">
-                <div class="have_pri">必备特权：<a href="#">群特权</a></div>
-               <a class="btn_friends act_btn" href="#"><span>去圈好友</span></a>
-                <p>每天前4次圈好友，您和朋友均可得抽奖机会！</p>
-                <!--未圈好友-->
-                <div class="icon_choosen none"></div>
-                <!--已圈好友-->
-                <div class="icon_choose"></div>
-            </div>
-        </li>
-        <li id="slide04" class="slide_default04">
-            <div class="like">
-                <!--未赞-->
-                <a class="btn_like act_btn" href="#"><span>赞</span></a>
-                <!--已赞-->
-                <a class="btn_liked act_btn none" href="#"><span>赞</span></a>
-                <span class="like_num">已有86288137人赞</span>
-            </div>
-            <div class="column_right">
-                <div class="have_pri">必备特权：<a href="#">移动在线</a></div>
-               <a class="btn_friends act_btn" href="#"><span>去圈好友</span></a>
-                <p>每天前4次圈好友，您和朋友均可得抽奖机会！</p>
-                <!--未圈好友-->
-                <div class="icon_choosen none"></div>
-                <!--已圈好友-->
-                <div class="icon_choose"></div>
-            </div>
-        </li>
-    </ul>
-
-
-
     <ul class="slideshow1 clearfix">
         <li id="slide01" class="slide_default01">
             <div class="like_wrapper">
@@ -171,35 +93,7 @@
 
 <script type="text/javascript">
     $(function() {
-        $.fn.hideseek.Constructor.prototype.to = function(num) {
-            this.$element.find('> li').eq(num).trigger('mouseenter');
-            this.index = num;
-            this.options.animate_interval_time && this.pause().autoPlay();  //先将之前的暂停再重新从新位置开始循环
-
-            return this;
-        }
-
-
-        //$('ul.slideshow').hideseek({animate_time: 600, animate_interval_time: 2000}).hideseek('to', 2).on('animate_start', function(e) {
-            //return e.preventDefault();
-            //return false;
-        //});
-
-        //$.fn.hideseek.Constructor.DEFAULTS.start_index = 2;
-        $('ul.slideshow').hideseek({animate_time: 600, animate_interval_time: 2000});
-
-        //var abc = new $.fn.hideseek.Constructor('.slideshow')
-        //var abc = new $('.slideshow').data('hideseek');
-        //abc.to(2);
-        //$('.slideshow1').hideseek({animate_time: 600, animate_interval_time: 2000, type: 'verti'});
-
-        $('.slideshow').data('hideseek').to(2);
-
-
-        // var selector = $('#bbbb').attr('href')
-        // alert(selector)
-        // selector = selector && selector.replace(/.*(?=#[^\s]*$)/, '')
-        // alert(selector)       
+        $('ul.slideshow1').hideseek({type: 'vertical'});   
     });
 </script>
 </body>
